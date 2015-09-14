@@ -1,0 +1,13 @@
+{
+  "generator-kraken": {
+    "taskModule": "grunt",
+    "description": "kraken sample",
+    "author": "Sathish Shanmugam",
+    "templateModule": false,
+    "i18n": "i18n",
+    "componentPackager": "bower",
+    "cssModule": "sass",
+    "jsModule": false,
+    "useJson": null
+  }
+}
