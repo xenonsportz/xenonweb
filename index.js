@@ -1,7 +1,11 @@
 'use strict';
 
+require('app-module-path').addPath(__dirname);
+require('marko/node-require').install();
+
 var express = require('express');
 var kraken = require('kraken-js');
+var viewEngine = require('view-engine');
 
 
 var options, app;
@@ -22,6 +26,10 @@ options = {
 
 app = module.exports = express();
 app.use(kraken(options));
+
+
+//viewEngine.register('marko', require('view-engine-marko'));
+
 app.on('start', function () {
     console.log('Application ready to serve requests.');
     console.log('Environment: %s', app.kraken.get('env:env'));

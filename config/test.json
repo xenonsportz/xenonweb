@@ -1,0 +1,78 @@
+{
+    "express": {
+        "view cache": false,
+        "view engine": "marko",
+        "views": "path:./.build/templates"
+    },
+
+    "view engines": {
+        "js": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "js",
+                "arguments": [{
+                    "cache": true
+                }, {
+                    "views": "config:express.views",
+                    "view engine": "config:express.view engine",
+                    "i18n": "config:i18n"
+                }]
+            }
+        },
+        "marko": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "marko",
+                "arguments": [{
+                    "cache": true
+                }, {
+                    "views": "config:express.views",
+                    "view engine": "config:express.view engine",
+                    "i18n": "config:i18n"
+                }]
+            }
+        }
+    }
+}
+
+"view engines": {
+    "dust": {
+        "module": "engine-munger",
+        "renderer": {
+            "method": "dust",
+            "arguments": [{
+                "cache": false
+            }, {
+                "views": "config:express.views",
+                "view engine": "config:express.view engine",
+                "i18n": "config:i18n"
+            }]
+        }
+    },
+    "js": {
+        "module": "engine-munger",
+        "renderer": {
+            "method": "js",
+            "arguments": [{
+                "cache": true
+            }, {
+                "views": "config:express.views",
+                "view engine": "config:express.view engine",
+                "i18n": "config:i18n"
+            }]
+        }
+    },
+    "marko": {
+        "module": "engine-munger",
+        "renderer": {
+            "method": "marko",
+            "arguments": [{
+                "cache": true
+            }, {
+                "views": "config:express.views",
+                "view engine": "config:express.view engine",
+                "i18n": "config:i18n"
+            }]
+        }
+    }
+},

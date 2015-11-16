@@ -1,22 +1,76 @@
 {
-  "i18n": {
+    "express": {
+        "view cache": false,
+        "view engine": "marko",
+        "views": "path:./.build/templates"
+    },
+
+    "view engines": {
+        "marko": {
+            "module": "engine-munger",
+            "renderer": {
+                "method": "js",
+                "arguments": [{
+                    "cache": true
+                }, {
+                    "views": "config:express.views",
+                    "view engine": "config:express.view engine",
+                    "i18n": "config:i18n"
+                }]
+            }
+        }
+    },
+
+    "lasso": {
+        "fileWriter": {
+            "url-prefix": "/static",
+            "outputDir": "path:../static",
+            "fingerprintsEnabled": true
+        },
+        "plugins": [{
+            "plugin": "lasso-marko",
+            "config": {}
+        }, {
+            "plugin": "lasso-less",
+            "config": {}
+        }],
+        "bundles": [{
+            "name": "jquery",
+            "dependencies": [
+                "require jquery"
+            ]
+        }],
+        "enabledExtensions": ["production"],
+        "minify": true,
+        "resolveCssUrls": true,
+        "bundlingEnabled": true,
+        "cacheProfile": "production"
+    },
+    "serveStatic": {
+        "maxAge": 31536000000
+    },
+
+    "bundle engine": "dust",
+
+    "i18n": {
         "contentPath": "path:./locales",
         "fallback": "en-US"
     },
 
-    "specialization": {
-    },
+    "specialization": {},
 
     "middleware": {
         "static": {
             "module": {
-                "arguments": [ "path:./.build" ]
+                "arguments": ["path:./.build"]
             }
         },
 
         "router": {
             "module": {
-                "arguments": [{ "directory": "path:./controllers" }]
+                "arguments": [{
+                    "directory": "path:./controllers"
+                }]
             }
         }
 

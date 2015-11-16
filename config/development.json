@@ -1,5 +1,24 @@
 {
-    
+
+    "express": {
+        "view cache": false,
+        "view engine": null,
+        "views": "path:./public/templates"
+    },
+
+    "lasso": {
+        "fileWriter": {
+            "fingerprintsEnabled": false
+        },
+        "minify": false,
+        "bundlingEnabled": false,
+        "enabledExtensions": ["development"],
+        "cacheProfile": "development"
+    },
+    "serveStatic": {
+        "maxAge": 0
+    },
+
 
     "middleware": {
 
@@ -7,20 +26,22 @@
             "enabled": true,
             "priority": 35,
             "module": {
-                "name": "construx",
+                "name": "kraken-devtools",
                 "arguments": [
                     "path:./public",
-                    "path:./.build",
-                    {
-                        
-                        
-                        "css": {
-                            "module": "construx-sass",
+                    "path:./.build", {
+                        "dust": {
+                            "module": "kraken-devtools/plugins/dustjs",
+                            "files": "/templates/**/*.js",
+                            "base": "templates",
+                            "i18n": "config:i18n"
+                        },
+                        "less": {
+                            "module": "kraken-devtools/plugins/less",
                             "files": "/css/**/*.css"
                         },
-                        
                         "copier": {
-                            "module": "construx-copier",
+                            "module": "kraken-devtools/plugins/copier",
                             "files": "**/*"
                         }
                     }
@@ -28,4 +49,5 @@
             }
         }
     }
+
 }

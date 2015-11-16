@@ -1,21 +1,21 @@
 'use strict';
 
-var IndexModel = require('../models/index');
+var SignInModel = require('../models/signin');
 
-
-module.exports = function (router) {
-
-    var model = new IndexModel();
-
-    // router.get('/', function (req, res) {
+module.exports = function(router) {
+    var signInPage = require('public/templates/pages/signin/page.marko');
+    
+    // Home page
+    //  router.get('/', function(req, res) {
+    //     //res.render('./../public/templates/index', model);
+    //     res.render('pages/signin/index1', model);
     //
-    //     res.send('<code><pre>' + JSON.stringify(model, null, 2) + '</pre></code>');
-    //
+    //     // res.send('you can find me at /users');
     // });
 
-    // Home page
-    router.get('/', function (req, res) {
-        res.render('pages/home/home', model);
-    });
 
+    router.get('/signin', function(req, res) {
+        var signInModel = new SignInModel(req);
+        signInPage.render(signInModel, res);
+    });
 };

@@ -7,19 +7,31 @@
   "scripts": {
     "test": "grunt test",
     "build": "grunt build",
-    "all": "npm run build && npm run test"
+    "all": "npm run build && npm run test",
+    "prestart": "rm -rf ./log; mkdir log"
   },
   "dependencies": {
+    "adaro": "~0.1.5",
+    "app-module-path": "^1.0.4",
     "construx": "^1.0.0",
     "construx-copier": "^1.0.0",
     "construx-sass": "^1.0.0",
+    "dustjs-helpers": "~1.2.0",
+    "dustjs-linkedin": "~2.3.4",
+    "engine-munger": "^0.2.0",
     "express": "^4.12.2",
+    "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.3",
+    "lasso": "^1.12.0",
     "lasso-less": "^2.1.2",
     "lasso-marko": "^2.0.4",
-    "less": "^2.5.1",
+    "less": "~1.7.0",
+    "localizr": "~0.1.0",
     "marko": "^2.7.21",
-    "marko-widgets": "^5.0.0"
+    "marko-widgets": "^5.0.0",
+    "mongoose": "~3.8.8",
+    "view-engine": "^1.1.1",
+    "view-engine-marko": "^2.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -32,5 +44,8 @@
     "grunt-sass": "^1.0.0",
     "mocha": "^1.18.0",
     "supertest": "^0.9.0"
+  },
+  "engines": {
+    "node": ">=4.0"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "require: marko-widgets",
+    "./../../layouts/core",
+    "page.less"
+  ]
+}
