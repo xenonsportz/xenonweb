@@ -1,7 +1,7 @@
 'use strict';
 
 
-module.exports = function IndexModel(req) {
+module.exports = function SignInPageModel(req) {
   var signInParam = req.query._signin;
   var pageMeta = {
     title: 'Sign in or Register | Xenon Sportz'

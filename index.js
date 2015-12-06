@@ -7,8 +7,11 @@ var express = require('express');
 var kraken = require('kraken-js');
 var viewEngine = require('view-engine');
 
-
 var options, app;
+
+//require('./config/passport')(passport); // pass passport for configuration
+
+
 
 /*
  * Create and configure application. Also exports application instance for use by tests.

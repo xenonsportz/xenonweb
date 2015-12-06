@@ -30,6 +30,9 @@
     "marko": "^2.7.21",
     "marko-widgets": "^5.0.0",
     "mongoose": "~3.8.8",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
     "view-engine": "^1.1.1",
     "view-engine-marko": "^2.0.0"
   },
