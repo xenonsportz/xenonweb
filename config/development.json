@@ -8,11 +8,24 @@
 
     "lasso": {
         "fileWriter": {
+            "url-prefix": "/static",
+            "outputDir": "./../static",
             "fingerprintsEnabled": false
         },
         "minify": false,
         "bundlingEnabled": false,
-        "enabledExtensions": ["development"],
+        "plugins": [
+          "lasso-less",
+          "lasso-marko",
+          "lasso-image"
+        ],
+        "bundles": [{
+            "name": "jquery",
+            "dependencies": [
+                "require:jquery"
+            ]
+        }],
+        "resolveCssUrls": false,
         "cacheProfile": "development"
     },
     "serveStatic": {

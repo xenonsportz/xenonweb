@@ -22,29 +22,24 @@
     },
 
     "lasso": {
-        "fileWriter": {
-            "url-prefix": "/static",
-            "outputDir": "path:../static",
-            "fingerprintsEnabled": true
-        },
-        "plugins": [{
-            "plugin": "lasso-marko",
-            "config": {}
-        }, {
-            "plugin": "lasso-less",
-            "config": {}
-        }],
-        "bundles": [{
-            "name": "jquery",
-            "dependencies": [
-                "require jquery"
-            ]
-        }],
-        "enabledExtensions": ["production"],
-        "minify": true,
-        "resolveCssUrls": true,
-        "bundlingEnabled": true,
-        "cacheProfile": "production"
+      "plugins": [
+        "lasso-less",
+        "lasso-marko",
+        "lasso-image"
+      ],
+      "url-prefix": "/static",
+      "outputDir": "static",
+      "fingerprintsEnabled": false,
+      "minify": false,
+      "bundlingEnabled": false,
+      "bundles": [{
+          "name": "jquery",
+          "dependencies": [
+              "require:jquery"
+          ]
+      }],
+      "resolveCssUrls": true,
+      "cacheProfile": "development"
     },
     "serveStatic": {
         "maxAge": 31536000000

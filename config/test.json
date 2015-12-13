@@ -1,3 +1,8 @@
+"auth": {
+  "enabled": true,
+  "module": "path:./middleware/passport"
+},
+
 {
     "express": {
         "view cache": false,

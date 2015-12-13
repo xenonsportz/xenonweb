@@ -6,12 +6,9 @@ require('marko/node-require').install();
 var express = require('express');
 var kraken = require('kraken-js');
 var viewEngine = require('view-engine');
+var passport = require('passport');
 
 var options, app;
-
-//require('./config/passport')(passport); // pass passport for configuration
-
-
 
 /*
  * Create and configure application. Also exports application instance for use by tests.
@@ -37,3 +34,5 @@ app.on('start', function () {
     console.log('Application ready to serve requests.');
     console.log('Environment: %s', app.kraken.get('env:env'));
 });
+app.use(require('lasso/middleware').serveStatic());
+require('./config').onConfigured();;

@@ -31,10 +31,7 @@
         }
     },
 
-    "auth": {
-      "enabled": true,
-      "module": "path:./middleware/passport"
-    },
+    
 
     "router": {
         "module": {
