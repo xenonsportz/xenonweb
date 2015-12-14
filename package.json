@@ -13,6 +13,7 @@
   "dependencies": {
     "adaro": "~0.1.5",
     "app-module-path": "^1.0.4",
+    "bootstrap": "^3.3.6",
     "construx": "^1.0.0",
     "construx-copier": "^1.0.0",
     "construx-sass": "^1.0.0",

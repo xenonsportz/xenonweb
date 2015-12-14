@@ -1,49 +1,26 @@
 <lasso-page package-path="./browser.json" />
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>$data.pageMeta.title</title>
-        <lasso-head />
-    </head>
-    <body>
-        <div id="xs-gh" class="clearfix">
-          <div class="xs-gh-wrapper clearfix">
-            <a href="/">
-              <span class="xs-icon" />
-            </a>
-          </div>
-          <div class="signup">
-            <a href="/signin">
-              Sign up
-            </a>
-          </div>
-          <div style="clear:both"></div>
-        </div>
+<layout-use template="public/templates/layouts/core/core.marko">
+  <layout-put into="PageMeta">
+    <title>$data.pageMeta.title</title>
+  </layout-put>
+  <layout-put into="PageBody">
+    <div class="signin">
+      <div class="info">
+        Log In
+      </div>
 
+      <!-- <button type="button" id="myButton" data-loading-text="Loading..."
+        class="btn btn-primary btn-lg" autocomplete="off">
+        Order
+      </button> -->
 
-        <div class="main">
-
-          <div class="signin">
-            <div class="info">
-              Log In 
-            </div>
-
-            <div w-bind="./widget" w-config="{test: 'vat'}">
-                <a href="javasscript:;" id="fb_login_link">
-                  <img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xaf1/t39.2178-6/851579_209602122530903_1060396115_n.png" border="0" alt="">
-                </a>
-            </div>
-            <div id="fb-root">
-            </div>
-          </div>
-        </div>
-
-        <div id="xs-footer" class="clearfix">
-        </div>
-
-        <lasso-body />
-        <init-widgets/>
-    </body>
-</html>
+      <div w-bind="./widget" w-config="{test: 'vat'}">
+          <a href="javasscript:;" id="fb_login_link">
+            <img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xaf1/t39.2178-6/851579_209602122530903_1060396115_n.png" border="0" alt="">
+          </a>
+      </div>
+      <div id="fb-root"></div>
+    </div>
+  </layout-put>
+</layout-use>

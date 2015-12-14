@@ -1,20 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Xenon sports</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <layout-placeholder name="PageMeta" />
+    <lasso-head />
+  </head>
+  <body>
+    <div id="xs-gh" class="clearfix">
+      <div class="xs-gh-wrapper clearfix">
+        <a href="/">
+          <span class="xs-icon" />
+        </a>
+      </div>
+      <div>
+        <form action="/search/" method="get" role="search" class="nav-selecta bo-selecta-3 yui-skin-sam" id="yui_3_11_0_3_1450073067201_157">
+					<input type="text" placeholder="Photos, people, or groups" name="q" value="" id="gn-search-field"
+            lass="gn-search input yui3-aclist-input grey" autocomplete="off" aria-label="Search"
+            data-rapid_p="25" aria-autocomplete="list" aria-expanded="false"
+            aria-owns="yui_3_11_0_3_1450073067201_365">
+				  <input type="submit" data-track="Search-search_icon" class="search-icon icon rapidnofollow" tabindex="-1"
+            value="Search" data-rapid_p="26">
+			    <div class="loading" style="display: none;">Loading...</div>
+          <div id="yui_3_11_0_3_1450073067201_346" class="yui3-widget yui3-aclist yui3-widget-positioned yui3-aclist-hidden"
+           aria-hidden="true" style="width: 360px; left: 0px; top: 33px;">
+          <div id="yui_3_11_0_3_1450073067201_348" class="yui3-aclist-content">
+            <ul class="yui3-aclist-list" id="yui_3_11_0_3_1450073067201_365" role="listbox"></ul>
+          </div>
+      </div><div class="yui3-aclist-aria" aria-live="polite" role="status"></div></form>
+      </div>
+      <div class="signup">
+        <a href="/signin">
+          Sign up
+        </a>
+      </div>
+      <div style="clear:both"></div>
+    </div>
 
-        <!-- <link rel="stylesheet" href="/css/app.css"> -->
+    <div class="main">
+      <layout-placeholder name="PageBody" />
+    </div>
 
-    </head>
-    <body>
+    <div id="xs-footer" class="clearfix">
+    </div>
 
-        <div id="wrapper">
-            core template
-        </div>
-
-
-
-
-    </body>
+    <lasso-body />
+    <init-widgets/>
+  </body>
 </html>

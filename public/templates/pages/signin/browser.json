@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "require:jquery",
-    "require:marko-widgets",
-    "./../../layouts/core",
+    "public/templates/layouts/core",
     "require: ./widget",
     "page.less"
   ]
